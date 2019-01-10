@@ -2,12 +2,16 @@
   "name": "hyperhtml-wire",
   "version": "0.0.0",
   "description": "The persistent fragment like class used in hyperHTML",
-  "main": "index.js",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "unpkg": "min.js",
   "scripts": {
-    "build": "npm run esm && npm run cjs && npm run min && npm run test",
+    "build": "npm run esm && npm run cjs && npm run min && npm run test && npm run size",
     "esm": "cp index.js esm/ && echo 'export default Wire;' >> esm/index.js",
     "cjs": "cp index.js cjs/ && echo 'module.exports = Wire;' >> cjs/index.js",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "min": "echo \"/*!(c) Andrea Giammarchi - ISC*/$(uglifyjs index.js -m -c)\" > min.js",
+    "size": "cat index.js | wc -c;cat min.js | wc -c;gzip -c9 min.js | wc -c;cat min.js | brotli | wc -c",
     "test": "istanbul cover test/index.js"
   },
   "keywords": [
@@ -21,6 +25,7 @@
   "license": "ISC",
   "devDependencies": {
     "basichtml": "^0.21.0",
+    "coveralls": "^3.0.2",
     "istanbul": "^0.4.5",
     "uglify-js": "^3.4.9"
   }
