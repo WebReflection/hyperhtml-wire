@@ -3,6 +3,8 @@ var Wire = (function (slice, proto) {
 
   proto = Wire.prototype;
 
+  proto.nodeType = 11;
+
   proto.remove = function (keepFirst) {
     var childNodes = this.childNodes;
     var first = this.firstChild;
