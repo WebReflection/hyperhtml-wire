@@ -20,6 +20,6 @@ wire.remove(true);  // remove all but first node (domdiff friendly)
 wire.remove(false); // remove all nodes
 
 wire.valueOf(true); // force nodes to be re-appended to a fragment
-wire.remove(false); // returns fragment with nodes only if not appended
+wire.valueOf(false);// returns fragment with nodes only if not appended
 
 ```
