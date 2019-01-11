@@ -4,14 +4,14 @@ var Wire = (function (slice, proto) {
   proto = Wire.prototype;
 
   proto.remove = function (keepFirst) {
-    var childNodes = this.n;
-    var first = this.first;
-    var last = this.last;
-    this.f = null;
+    var childNodes = this.childNodes;
+    var first = this.firstChild;
+    var last = this.lastChild;
+    this._ = null;
     if (keepFirst && childNodes.length === 2) {
       last.parentNode.removeChild(last);
     } else {
-      var range = this.d.createRange();
+      var range = this.ownerDocument.createRange();
       range.setStartBefore(keepFirst ? childNodes[1] : first);
       range.setEndAfter(last);
       range.deleteContents();
@@ -20,25 +20,25 @@ var Wire = (function (slice, proto) {
   };
 
   proto.valueOf = function (forceAppend) {
-    var frag = this.f;
-    var noFrag = frag == null;
-    if (noFrag)
-      frag = (this.f = this.d.createDocumentFragment());
-    if (noFrag || forceAppend) {
-      for (var n = this.n, i = 0, l = n.length; i < l; i++)
-        frag.appendChild(n[i]);
+    var fragment = this._;
+    var noFragment = fragment == null;
+    if (noFragment)
+      fragment = (this._ = this.ownerDocument.createDocumentFragment());
+    if (noFragment || forceAppend) {
+      for (var n = this.childNodes, i = 0, l = n.length; i < l; i++)
+        fragment.appendChild(n[i]);
     }
-    return frag;
+    return fragment;
   };
 
   return Wire;
 
   function Wire(childNodes) {
-    var nodes = (this.n = slice.call(childNodes, 0));
-    this.first = nodes[0];
-    this.last = nodes[nodes.length - 1];
-    this.d = nodes[0].ownerDocument;
-    this.f = null;
+    var nodes = (this.childNodes = slice.call(childNodes, 0));
+    this.firstChild = nodes[0];
+    this.lastChild = nodes[nodes.length - 1];
+    this.ownerDocument = nodes[0].ownerDocument;
+    this._ = null;
   }
 
 }([].slice));

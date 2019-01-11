@@ -11,8 +11,10 @@ import Wire from 'hyperhtml-wire';
 
 const wire = new Wire(document.body.querySelectorAll('*'));
 
-wire.first; // first body element
-wire.last;  // last body element
+wire.firstChild;    // first body element
+wire.lastChild;     // last body element
+wire.childNodes;    // an array of initial nodes
+wire.ownerDocument; // the document of the first child
 
 wire.remove(true);  // remove all but first node (domdiff friendly)
 wire.remove(false); // remove all nodes
