@@ -3,7 +3,7 @@ var Wire = (function (slice, proto) {
 
   proto = Wire.prototype;
 
-  // as super fragment
+  proto.ELEMENT_NODE = 1;
   proto.nodeType = 111;
 
   proto.remove = function (keepFirst) {
