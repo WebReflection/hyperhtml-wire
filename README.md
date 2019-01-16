@@ -1,6 +1,6 @@
 # hyperhtml-wire
 
-[![Build Status](https://travis-ci.com/WebReflection/hyperhtml-wire.svg?branch=master)](https://travis-ci.com/WebReflection/hyperhtml-wire) [![Coverage Status](https://coveralls.io/repos/github/WebReflection/hyperhtml-wire/badge.svg?branch=master)](https://coveralls.io/github/WebReflection/hyperhtml-wire?branch=master) ![WebReflection status](https://offline.report/status/webreflection.svg)
+[![Build Status](https://travis-ci.com/WebReflection/hyperhtml-wire.svg?branch=master)](https://travis-ci.com/WebReflection/hyperhtml-wire) [![Coverage Status](https://coveralls.io/repos/github/WebReflection/hyperhtml-wire/badge.svg?branch=master)](https://coveralls.io/github/WebReflection/hyperhtml-wire?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/WebReflection/hyperhtml-wire.svg)](https://greenkeeper.io/) ![WebReflection status](https://offline.report/status/webreflection.svg)
 
 The persistent fragment like class used in [hyperHTML](https://github.com/WebReflection/hyperHTML).
 
