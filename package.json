@@ -1,6 +1,6 @@
 {
   "name": "hyperhtml-wire",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "The persistent fragment like class used in hyperHTML",
   "main": "cjs/index.js",
   "module": "esm/index.js",
