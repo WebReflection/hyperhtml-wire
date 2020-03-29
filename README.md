@@ -6,6 +6,8 @@ The persistent fragment like class used in [hyperHTML](https://github.com/WebRef
 
 This is particularly useful with [domdiff](https://github.com/WebReflection/domdiff) so it's been extracted from _hyperHTML_ itself..
 
+If you're looking for a smaller, modern, faster, alternative, check [µwire](https://github.com/WebReflection/uwire#readme) out 😉
+
 ```js
 import Wire from 'hyperhtml-wire';
 

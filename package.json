@@ -24,9 +24,9 @@
   "author": "Andrea Giammrchi",
   "license": "ISC",
   "devDependencies": {
-    "basichtml": "^2.1.4",
-    "coveralls": "^3.0.9",
+    "basichtml": "^2.2.2",
+    "coveralls": "^3.0.11",
     "istanbul": "^0.4.5",
-    "uglify-js": "^3.8.0"
+    "uglify-js": "^3.8.1"
   }
 }
